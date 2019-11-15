@@ -23,7 +23,10 @@ export function load(){
 }
 
 export function filterData(input){
-    const filteredArray = userArray.filter(user => user.firstName.includes(input) && user.lastName.includes(input) )
+    const filteredArray = userArray.filter(user => {
+        const fullName = user.firstName + " " + user.lastName;
+        return fullName.includes(input);
+    })
     loadTemplate(filteredArray);
 }
 
