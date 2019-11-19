@@ -25,7 +25,7 @@ export function load(){
 export function filterData(input){
     const filteredArray = userArray.filter(user => {
         const fullName = user.firstName + " " + user.lastName;
-        return fullName.includes(input);
+        return fullName.toLocaleLowerCase().includes(input.toLocaleLowerCase());
     })
     loadTemplate(filteredArray);
 }
@@ -41,7 +41,7 @@ function loadTemplate(users){
             + ` age=` +  user.age
             + ` firstName=` +  user.firstName
             + ` lastName=` +  user.lastName
-            + ` phone=` +  user.phone
+            + ` phone='` +  user.phone + `'` 
             + ` address=` +  user.address
             + ` category=` +  user.category
             + `></user-component>`

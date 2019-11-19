@@ -21,7 +21,7 @@ export function load(){
 }
 
 export function filterData(input){
-    const filteredArray = debtArray.filter(debt => debt.description.includes(input) )
+    const filteredArray = debtArray.filter(debt => debt.description.toLocaleLowerCase().includes(input.toLocaleLowerCase()) )
     loadTemplate(filteredArray);
 }
 

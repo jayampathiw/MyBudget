@@ -1,11 +1,26 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
 }
 
 .card-container {
 	width: 50%;
 }
-
+.search-input{
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 20px;
+}
